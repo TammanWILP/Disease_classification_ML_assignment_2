@@ -2,9 +2,18 @@
 
 ## a. Problem Statement
 
-The objective of this project is to design, implement, and deploy a **multiclass machine learning classification system** that predicts the **disease category** of a patient based on blood sample parameters.
+The objective of this project is to design, implement, and deploy a **multiclass machine learning classification system** that predicts the **disease category of a patient** based on blood sample parameters.
 
-Each blood sample is treated as an independent observation, and the task is to classify it into **one disease class out of multiple possible disease categories**. This project demonstrates a complete **end-to-end machine learning workflow**, including data preprocessing, model training, evaluation, and deployment through an interactive Streamlit web application.
+Given a dataset containing multiple **numerical blood test features**, each patient record must be classified into **one disease category out of multiple possible disease classes**. This problem is formulated as a **supervised multiclass classification task**, where each instance belongs to exactly one target class.
+
+The project aims to:
+- Implement and compare multiple machine learning classification models on the same dataset  
+- Evaluate each model using standard performance metrics such as Accuracy, AUC, Precision, Recall, F1 Score, and Matthews Correlation Coefficient (MCC)  
+- Analyze and compare the performance of individual and ensemble models  
+- Deploy the trained models through an interactive **Streamlit web application** that allows dataset upload, model selection, evaluation, and visualization  
+
+This demonstrates a complete **end-to-end machine learning workflow**, covering data preprocessing, model training, evaluation, comparative analysis, and real-world deployment.
+
 
 ---
 
