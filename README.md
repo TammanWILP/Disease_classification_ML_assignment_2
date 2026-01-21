@@ -1,4 +1,4 @@
-# 🩺 Multiclass Disease Classification using Blood Sample Data
+# Multiclass Disease Classification using Blood Sample Data
 
 ## a. Problem Statement
 
