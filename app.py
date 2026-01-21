@@ -16,12 +16,12 @@ from sklearn.metrics import (
 from sklearn.preprocessing import label_binarize
 
 # ---------------- Page Config ----------------
-st.set_page_config(page_title="Multiple Disease Prediction", layout="wide")
+st.set_page_config(page_title="Disease Classification using Blood Sample Data", layout="wide")
 
 TARGET_COL = "Disease"
 
 st.title("Multiclass Disease Classification using Blood Sample Data")
-st.write("Multiclass classification using machine learning models")
+st.write("Try and Compare Performance Across Different ML Models")
 
 # ---------------- Sidebar ----------------
 st.sidebar.header("Model Selection")
@@ -39,7 +39,7 @@ model_name = st.sidebar.selectbox("Choose a model", list(model_dict.keys()))
 model = joblib.load(model_dict[model_name])
 
 # ------------------------------------------------
-# 🔹 Learn CLASS_NAMES ONLY from LOCAL data/test.csv
+# Learn CLASS_NAMES ONLY from LOCAL data/test.csv
 # ------------------------------------------------
 df_local_test = pd.read_csv("data/test.csv")
 
@@ -65,7 +65,7 @@ uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
 
 # Inform user of evaluation vs prediction-only modes
 st.info(
-    "This model can work in two modes:\n\n"
+    "This App can work in two modes:\n\n"
     "- **Evaluation mode:** If your CSV contains a 'Disease' (target) column, the model will assess its performance (compute metrics and confusion matrix).\n"
     "- **Prediction-only mode:** If your CSV does not contain the target column, the model will output predictions only.\n"
 )
@@ -131,7 +131,7 @@ if evaluation_mode:
     # Compute metrics first
     accuracy = accuracy_score(y_test, y_pred)
     auc = roc_auc_score(y_test_bin, y_prob, multi_class="ovr")
-    precision = precision_score(y_test, y_pred, average="weighted")
+    precision = precision_score(y_test, y_pred, average="weighted", zero_division=0)
     recall = recall_score(y_test, y_pred, average="weighted")
     f1 = f1_score(y_test, y_pred, average="weighted")
     mcc = matthews_corrcoef(y_test, y_pred)
