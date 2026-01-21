@@ -22,7 +22,8 @@ pipe = Pipeline([
     ("classifier", XGBClassifier(
         objective="multi:softprob",
         num_class=y.nunique(),
-        eval_metric="mlogloss"
+        eval_metric="mlogloss",
+        random_state=42
     ))
 ])
 

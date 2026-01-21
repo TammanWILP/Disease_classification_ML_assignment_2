@@ -88,12 +88,11 @@ The target variable is a **multiclass categorical label** with the following **s
 | ML Model Name | Accuracy | AUC | Precision | Recall |   F1   | MCC |
 |---------------|----------|-----|-----------|--------|--------|-----|
 | Logistic Regression | 0.8820 | 0.9209 | 0.8765 | 0.8820 | 0.8779 | 0.8476 |
-| Decision Tree | 0.9613 | 0.9246 | 0.9586 | 0.9613 | 0.9595 | 0.9499 |
+| Decision Tree | 0.9683 | 0.9474 | 0.9678 | 0.9683 | 0.9673 | 0.9590 |
 | KNN | 0.9137 | 0.9277 | 0.9184 | 0.9137 | 0.9090 | 0.8898 |
 | Naive Bayes | 0.8151 | 0.9515 | 0.8139 | 0.8151 | 0.8120 | 0.7593 |
-| Random Forest (Ensemble) | 0.9665 | 0.9979 | 0.9556 | 0.9665 | 0.9601 | 0.9572 |
+| Random Forest (Ensemble) | 0.9648 | 0.9981 | 0.9538 | 0.9648 | 0.9584 | 0.9549 |
 | XGBoost (Ensemble) | 0.9859 | 0.9975 | 0.9833 | 0.9859 | 0.9832 | 0.9818 |
-
 
 ---
 
@@ -102,10 +101,10 @@ The target variable is a **multiclass categorical label** with the following **s
 | ML Model Name      | Observation about model performance                                                                                                                    |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Logistic Regression| Linear model; moderately accurate (0.8820) and MCC (0.8476). Can struggle to capture complex decision boundaries, explaining why it trails non-linear approaches. |
-| Decision Tree      | High accuracy (0.9613) and MCC (0.9499). Learns non-linear relationships well but may slightly underperform in generalization compared to ensembles due to risk of overfitting. |
+| Decision Tree      | High accuracy (0.9683) and MCC (0.9590). Learns non-linear relationships well but may slightly underperform in generalization compared to ensembles due to risk of overfitting. |
 | KNN                | Solid accuracy (0.9137) and MCC (0.8898); a non-parametric method sensitive to feature scaling and curse of dimensionality, which limits its advantage over tree-based methods. |
 | Naive Bayes        | Fastest due to simple computations, but lowest accuracy (0.8151) and MCC (0.7593). Assumes feature independence, which rarely holds in practice; notable for highest AUC (0.9515) showing good ranking ability on this dataset. |
-| Random Forest (Ensemble)      | Combines many decision trees to improve generalization; excellent accuracy (0.9665) and MCC (0.9572), reducing variance and overfitting but slightly less performant than XGBoost. |
+| Random Forest (Ensemble)      | Combines many decision trees to improve generalization; excellent accuracy (0.9648) and MCC (0.9549), reducing variance and overfitting but slightly less performant than XGBoost. |
 | XGBoost (Ensemble)            | Gradient boosting ensemble. Best overall metrics: accuracy (0.9859) and MCC (0.9818); excels due to regularization, weighted learning, and handling of complex feature interactions—sets the benchmark for this dataset.   |
 ---
 

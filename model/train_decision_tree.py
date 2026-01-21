@@ -18,7 +18,7 @@ X, y = df.drop("Disease", axis=1), df["Disease"]
 
 pipe = Pipeline([
     ("preprocessing", get_preprocessor(X)),
-    ("classifier", DecisionTreeClassifier())
+    ("classifier", DecisionTreeClassifier(random_state=42))
 ])
 
 pipe.fit(X, y)
